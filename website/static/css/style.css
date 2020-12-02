@@ -1395,7 +1395,7 @@ body {
   .chefs .member {
     text-align: center;
     margin-bottom: 20px;
-    background: #343a40;
+    background: #35344000;
     position: relative;
     overflow: hidden;
   }
@@ -1472,6 +1472,11 @@ body {
   .chefs .member:hover .social {
     bottom: 0;
     transition: bottom ease-in-out 0.4s;
+  }
+  @media (min-width: 1024px) {
+    #trend {
+      background-attachment: fixed;
+    }
   }
   
   /*--------------------------------------------------------------
@@ -1653,6 +1658,11 @@ body {
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+  @media (min-width: 1024px) {
+    #conclusion {
+      background-attachment: fixed;
     }
   }
   
