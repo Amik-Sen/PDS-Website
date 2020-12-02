@@ -1,11 +1,155 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title> Multi Period PDS </title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Multi Period PDS</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
 </head>
-<body>
-    <h1>Testing </h1>
+<body> 
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <a href="{% url 'home' %}" class="logo mr-auto"><img src="{% static 'img/2.gif' %}" alt="" class="img-fluid"> </a>
+        <!--<h1 class="logo mr-auto"><a>Multi Period PDS with uncertain demand</a></h1>-->
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#conclusion">Distribution Network</a></li>
+            <li><a href="#trend">Trend</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Dynamic Distribution Planning <span>under risk</span></h1>
+          <h2>During pandemic outbreak in PDS</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{% static 'img/offices.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Food Corporation of India Regional Offices presnt in West Bengal</h3>
+            <p class="font-italic">
+                These the districts in West Bengal which have FCI Regional offices which play a crucial role in 
+                public distribution system.
+            </p>
+            </div>
+        </div>
+        </div>
+    </section>
+        <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+        <div class="row">
+        <div class="col-lg-6 " data-aos="zoom-in" data-aos-delay="100" style = "widows: 400px;">
+            <div class="about-img">
+            <img src="{% static 'img/godown.jpg' %}" alt="">
+            </div>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+                <h3> Government Regulated Godowns accross West Bengal</h3>
+                <p class="font-italic">
+                  This plot shows the number of godowns that are available in each districts of West Bengal. These are 
+                  controlled by government and play a crucial role in public distribution system especially during 
+                  uncertain times. 
+                </p>
+                </div>
+            </div>
+          </div>
+
+    </section><!-- End About Section -->
+
+    <section id="conclusion" class="contact">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <p>Distribution Network near <span>Kharagpur</span></p>
+              </div>
+            <div data-aos="fade-up">
+                <iframe style="border:0; width: 100%; height: 450px; margin-top: 50px;" src="https://www.google.com/maps/d/embed?mid=1DI4NSipOJYxEWf60jNlCaRersEHPifAs" frameborder="0" allowfullscreen></iframe>
+              </div>
+        </div>
+    </section>
+
+    <section id="trend" class="chefs">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <p>Trend and Predictions</p>
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-6 col-md-6">
+              <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>Walter White</h4>
+                    <span>Master Chef</span>
+                  </div>
+                     </div>
+                  </div>
+                 </div>
+                 <div class="col-lg-6 col-md-6">
+                    <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                      <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+                      <div class="member-info">
+                        <div class="member-info-content">
+                          <h4>Walter White</h4>
+                          <span>Master Chef</span>
+                        </div>
+                           </div>
+                        </div>
+                       </div>
+             </div>
+        </div>
+     </section>
+
+
+
+
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
-
