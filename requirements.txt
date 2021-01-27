@@ -1,19 +1,39 @@
-asgiref==3.3.1
-certifi==2020.11.8
-chardet==3.0.4
+asgiref @ file:///tmp/build/80754af9/asgiref_1605055780383/work
+attrs==20.3.0
+branca==0.4.2
+certifi==2020.12.5
+chardet==4.0.0
+click==7.1.2
+click-plugins==1.1.1
+cligj==0.7.1
+cycler==0.10.0
 dj-database-url==0.5.0
-Django==3.1.4
+Django @ file:///tmp/build/80754af9/django_1609784082548/work
 django-heroku==0.3.1
+Fiona==1.8.18
+folium==0.12.0
+geopandas==0.8.1
 gunicorn==20.0.4
-heroku==0.1.4
 idna==2.10
-numpy==1.19.4
-pandas==1.1.4
-psycopg2==2.8.6
+Jinja2==2.11.2
+kiwisolver==1.3.1
+MarkupSafe==1.1.1
+matplotlib==3.3.3
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+munch==2.5.0
+numpy @ file:///opt/concourse/worker/volumes/live/5572694e-967a-4c0c-52cf-b53d43e72de9/volume/numpy_and_numpy_base_1603491881791/work
+pandas==1.2.0
+Pillow==8.1.0
+psycopg2 @ file:///opt/concourse/worker/volumes/live/ad562067-300d-4e37-4f54-3b1ac8fa91bd/volume/psycopg2_1608147599750/work
+pyparsing==2.4.7
+pyproj==3.0.0.post1
 python-dateutil==2.8.1
-pytz==2020.4
-requests==2.25.0
-six==1.15.0
-sqlparse==0.4.1
+pytz @ file:///tmp/build/80754af9/pytz_1608922264688/work
+requests==2.25.1
+Shapely @ file:///opt/concourse/worker/volumes/live/b6b1656d-4a2d-49a9-5ffa-0a8179e23e85/volume/shapely_1599817147652/work
+six @ file:///opt/concourse/worker/volumes/live/5b31cb27-1e37-4ca5-6e9f-86246eb206d2/volume/six_1605205320872/work
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
 urllib3==1.26.2
 whitenoise==5.2.0
