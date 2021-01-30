@@ -3,7 +3,7 @@ import urllib.request, json
 from django.conf import settings
 import folium
 import pandas as pd
-import schedule
+
 def prep(location,state):
     dis_lat_lon_dir = os.path.join(settings.BASE_DIR,'Data_files and other codes','District Lat Long',state+'_District_lat_long.xlsx')
     fps_dir = os.path.join(settings.BASE_DIR,'Data_files and other codes','FPS',state,'Fps_'+location+'.xlsx')
