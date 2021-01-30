@@ -12,275 +12,464 @@
   <title>Multi Period PDS</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  
-  <!-- Navigation bar Start -->
+ 
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="navbar-main">
-    <a class="navbar-brand" href="#"><img style ="width:70px;" src="../static/img/2.gif" alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="nav nav-pills">
-        <li class="nav-item active">
-          <a class="nav-link" href="#About_us" style="font-size: 20px;">About us <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px;">
-            Select Location 
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#planning">Distribution Planning</a>
-            <a class="dropdown-item" href="#capture">Data Collection</a>
-            <a class="dropdown-item" href="#">Visualization</a>
-          </div>
-        </li>
-        <li class="nav-item"style="font-size: 20px;">
-          <a class="nav-link" href="#team"> The Team</a>
-        </li>
-        <li class="nav-item"style="font-size: 20px;">
-          <a class="nav-link" href="#contact_us">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- Navigation bar End -->
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
 
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
-<body data-spy="scroll" data-target="#navbar-main" data-offset="100" style="background-image: url();background-attachment: fixed;">
-  <!-- Main Grid Starts -->
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+      <div class="header-container d-flex align-items-center">
+        <div style="margin:auto; overflow: hidden;">
+          <h1><a href="index.html"><img style ="width:70px;" src="../static/img/2.gif" alt="logo" class="img-fluid"></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
 
-  <div class="container" style="padding-bottom: 2%;margin-top:7%;">
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#header">Home</a></li>
+            <li><a href="#services">About Us</a></li>
+            <li><a href="#about">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#footer">Contact Us</a></li>
 
-  <!-- About us row Starts -->
-
-    <div class="row">
-      <div class="col-sm" style="padding-top:2%">
-        <nav class="navbar justify-content-between" style="background-color:#e9e4e4;">
-          <a class="navbar-brand"id="About_us">About us</a>
-        </nav>
-      </div>
+            <li class="get-started"><a href="#services">Get Started</a></li>
+          </ul>
+        </nav><!-- .nav-menu -->
+      </div><!-- End Header Container -->
     </div>
-    <div class="row">
-      <div class="col-sm" style="padding-top:2%">
-        <p style="font-size: 22px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia minima expedita architecto nam consequuntur nihil est non eum! Sed obcaecati cupiditate eius deleniti laudantium saepe, officia labore sunt recusandae nam.</p>
-        <br>
-        <p style="font-size: 22px;">Lorem ipsum, dolor sit amet consectet Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta porro, commodi officiis corrupti repellat tenetur voluptatum quasi laudantium sint delectus! Est perferendis sed repellendus, corporis provident praesentium tempore reiciendis. Debitis.</p>
-      </div>
+  </header><!-- End Header -->
+
+   <!-- ======= Hero Section ======= -->
+   <section id="hero" class="d-flex align-items-center" style="">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>DISTRIBUTION REQUIREMENTS PLANNING</h1>
+      <h2>Plan, optimize and excute public distribution systems</h2>
+      <a href="#services" class="btn-get-started scrollto">Get Started</a>
     </div>
+    <main id="main">
+      
+    </main>
+  </section><!-- End Hero -->
 
-    <!-- About us row ends -->
+  <!-- ======= About Section ======= -->
+  <section id="services"class="about">
+    <div class="container">
 
-    <!-- Distribution Planning row starts -->
-
-    <div class="row">
-      <div class="col-sm" style="padding-top:2%">
-        <nav class="navbar justify-content-between" style="background-color:#e9e4e4;">
-          <a class="navbar-brand" id="planning">Distribution Planning</a>
-        </nav>
+      <div class="row content">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <h2>Dynamic Distribution Planning</h2>
+          <h3>An effective heuristic to solve large size inventory transportation problem of Indian PDS with supply disruptions due to COVID-19​</h3>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
+          <p>
+            Purpose of this application is to demonstrate a mathematical model for the public distribution system (PDS) of India considering three layered supply chain and disruptions due to COVID-19 in the PDS system, and solving the mathematical model using the heuristic approach developed.
+            The three layered supply chain that we considered for this application is:
+          </p>
+          <ul>
+            <li><i class="ri-check-double-line"></i> State Warehouses, which are basically godowns regulated by State Government</li>
+            <li><i class="ri-check-double-line"></i> Wholesalers, Who get there goods from state warehouses and they send them to Fair Price Shops (FPS) </li>
+            <li><i class="ri-check-double-line"></i> Fair Price Shops(FPS), are the stores which provide good to people at cheaper rates.</li>
+          </ul>
+          <p class="font-italic">
+            The current situation due to COVID-19 has affected the demands of fair price shops to address this change in demand, considering fair price shops, become an important part of the
+            model.
+          </p>
+        </div>
       </div>
+
     </div>
-    <div class="row">
-      <div class="col-sm">
-        <form>
-          <div class="form-row" style="padding-top: 2%; align-self: center;">
-            <div class="col">
-              <select class="custom-select">
-                <option selected>Select State</option>
-                <option value="1">West Bengal</option>
-              </select>
+  </section><!-- End About Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section class="services section-bg">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Modules</h2>
+            <p>These are back-bone of this application which provides us with all the components we require for generating desired results. </p>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href=""> Forecast Module
+                </a></h4>
+                <p>The module responsible for producing expected demand, which is a vital component for our application.</p>
+              </div>
             </div>
-            <div class="col">
-              <select class="custom-select">
-                <option selected>Select District</option>
-                {% for case in data %}
-                <option value={{case.District}}>{{case.District}}</option>
-                {% endfor %}
-              </select>
+
+            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="">Data collection Module</a></h4>
+                <p>The module responsible for collecting input data or for updating existing data of the public distribution system.</p>
+              </div>
             </div>
-            <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+
+            <div class="col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="">Optimization Module</a></h4>
+                <p>The module responsible for running the hybrid optimization algorithm to generate solution.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <h4><a href="">Visualisation Module</a></h4>
+                <p>The module responsible for generating all the maps and graphs in this application.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Why Us Section ======= -->
+  <section id="about" class="why-us">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-right">
+          <div class="content">
+            <h3>What are the features we provide?</h3>
+            <p>
+              Based on our understanding of the public distribution system, we have created three features, which takes in consideration most of the factors that are 
+              involved in it's decision making. These easy to use features makes this application user friendly.
+            </p>
+            <div class="text-center">
+              <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
-        </form>
+        </div>
+        <div class="col-lg-8 d-flex align-items-stretch">
+          <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Capture Data</h4>
+                  <p>Used for updating changes in the Distribution System</p>
+                  <div class="text-center">
+                    <a href="#services" class="btn-get-started scrollto">Get Started</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Distribution Planning</h4>
+                  <p>Takes input of model parameters and shows optimised results</p>
+                  <div class="text-center">
+                    <a href="#services" class="btn-get-started scrollto">Get Started</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box mt-4 mt-xl-0">
+                  <i class="bx bx-images"></i>
+                  <h4>Visualisation</h4>
+                  <p>Shows trends and maps for better planning of the distribution system.</p>
+                  <div class="text-center">
+                    <a href="#services" class="cta-btn">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End .content-->
+        </div>
       </div>
+
     </div>
-    <div class="row" style="padding-top:2%;justify-content: center;">
-      <div class="col-sm" style="justify-content: center;">
-        <div class="card mb-3" style="width:55rem;justify-content: center;margin: auto;">
-          <div class="card-header" id ="capture">{{covid_map|safe}}</div>
-          <p class="card-text"><small class="text-muted" style="padding-top:2%;padding-left:2%">Current Network (Last updated 3 mins ago)</small></p>
+  </section><!-- End Why Us Section -->
+  
+     <!-- ======= Portfolio Section ======= -->
+     <section class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-left">
+          <h2>Select Service</h2>
+          <p>To see the software in action, select any of the available module and follow the steps as directed. If you choose to directly run the model, then the output shown will be based on the previously stored Distribution System values.</p>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-10_1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Capture Data</h4>
+                <p>Click to capture data</p>
+                <div class="portfolio-links">
+                  <a href="#" title="More Details"><i class="bx bx-play"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-11.png' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Distribution Planning</h4>
+                <p>Click to start model</p>
+                <div class="portfolio-links">
+                  <a href="#" title="More Details"><i class="bx bx-play"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/portfolio/portfolio-14_1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Visualisation</h4>
+                <p>click to begin</p>
+                <div class="portfolio-links">
+                  <a href="#" title="More Details"><i class="bx bx-play"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </section>
+
+          <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="section-title" data-aos="fade-right">
+              <h2>Team</h2>
+            </div>
+          </div>
+        </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="{% static 'img/team/mj.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Mamata Jenamani</h4>
+                    <span>Assistant Professor</span>
+                    <p>IIT, Kharagpur</p>
+                    <div class="social">
+                      <a href=""><i class="ri-twitter-fill"></i></a>
+                      <a href=""><i class="ri-facebook-fill"></i></a>
+                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 ">
+                <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="pic"><img src="{% static 'img/team/pr.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Pritee Ray </h4>
+                    <span>Product Manager</span>
+                    <p>IIM, Ranchi</p>
+                    <div class="social">
+                      <a href=""><i class="ri-twitter-fill"></i></a>
+                      <a href=""><i class="ri-facebook-fill"></i></a>
+                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="pic"><img src="{% static 'img/team/st.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Sudhanshu Tiwari</h4>
+                    <span>M.Tech.</span>
+                    <p>IIT, Kharagpur</p>
+                    <div class="social">
+                      <a href=""><i class="ri-twitter-fill"></i></a>
+                      <a href=""><i class="ri-facebook-fill"></i></a>
+                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="row">
+              <div class="col-lg-4 mt-4">
+                <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="pic"><img src="{% static 'img/team/as.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Amik Sen</h4>
+                    <span>B.Tech.</span>
+                    <p>IIT, Kharagpur</p>
+                    <div class="social">
+                      <a href=""><i class="ri-twitter-fill"></i></a>
+                      <a href=""><i class="ri-facebook-fill"></i></a>
+                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-4">
+                <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="pic"><img src="{% static 'img/team/am.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Ayan Mondal</h4>
+                    <span>M.Tech</span>
+                    <p>Jadavpur University</p>
+                    <div class="social">
+                      <a href=""><i class="ri-twitter-fill"></i></a>
+                      <a href=""><i class="ri-facebook-fill"></i></a>
+                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-4">
+                <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="pic"><img src="{% static 'img/team/kn.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Keertimaan Nayak</h4>
+                    <span>B.Tech.</span>
+                    <p>IIT, Kharagpur</p>
+                    <div class="social">
+                      <a href=""><i class="ri-twitter-fill"></i></a>
+                      <a href=""><i class="ri-facebook-fill"></i></a>
+                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+      <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Mamata Jenamani</h3>
+            <p>
+              Industrial and Systems Engineering<br>
+              IIT, Kharagpur,<br>
+              West Bengal, India <br><br>
+              <strong>Phone:</strong> +91-3222-283740<br>
+              <strong>Email:</strong> mj@iem.iitkgp.ac.in<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Capturing Data</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Distribution Planning</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Visualisation</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Contact us</h4>
+            <p>Enter your email address for updates</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Submit">
+            </form>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <!-- Input Modal starts-->
+    <div class="container d-md-flex py-4">
 
-    <div class="modal fade" id="inputModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Data Input</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Page under construction, will make changes soon
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Run Model</button>
-          </div>
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>IIT Kharagpur</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
         </div>
       </div>
-    </div>
-
-    <!-- Input Modal ends-->
-    
-    <div class="row" style="padding-top:2%;justify-content: center;">
-      <div class="col-sm" style="justify-content: center;">
-        <div class="card-group">
-          <div class="card bg-light mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Update Network Data</h5>
-              <p class="card-text">Update avaiable data for the network model</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">
-                Update data
-              </button>
-            </div>
-          </div>
-          <div class="card bg-light mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Run Model</h5>
-              <p class="card-text">Enter the given parameters, and run the model to obtain results.</p>
-              <p class="card-text"><small class="text-muted"> Current Network (Last updated 3 mins ago)</small></p>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputModal">
-                Input Data
-              </button>
-            </div>
-          </div>
-          </div>
-      </div>
-    </div> 
-        <!-- Update Modal starts-->
-
-    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Update Network Information</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Page under construction, will make changes soon
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save Changes</button>
-          </div>
-        </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-        <!-- Update Modal ends-->
+  </footer><!-- End Footer -->
 
-    <!-- Distribution planning row ends -->
 
-    <!-- The Team start-->
-
-    <div class="row">
-      <div class="col-sm" style="padding-top:2%">
-        <nav class="navbar justify-content-between" style="background-color:#e9e4e4;">
-          <a class="navbar-brand" id="team">The Team</a>
-        </nav>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm" style="padding-top:2%">
-        <div class="card-deck">
-          <div class="card text-center">
-            <img class="card-img-top" src="../static/img/10.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Name</h5>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ex repudiandae eum assumenda ab ipsam dolore. Aliquam amet, sit omnis eum doloribus odit nemo, numquam repellendus molestiae magnam fugiat quis.</p>
-              <p class="card-text"><small class="text-muted">College/Company</small></p>
-            </div>
-          </div>
-          <div class="card text-center">
-            <img class="card-img-top" src="../static/img/10.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Name</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est accusantium quidem? Ipsa nostrum modi, blanditiis voluptatum eos dolores voluptates. Tempore neque commodi provident fugit pariatur a? Ab, alias illo?</p>
-              <p class="card-text"><small class="text-muted">College/company</small></p>
-            </div>
-          </div>
-          <div class="card text-center">
-            <img class="card-img-top" src="../static/img/10.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Name</h5>
-              <p class="card-text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam saepe reprehenderit debitis perferendis sunt doloremque, at minus maxime rem assumenda dignissimos enim? Totam nihil odit facilis esse provident. Illum, ratione.</p>
-              <p class="card-text"><small class="text-muted">College/company</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-sm" style="padding-top:2%;">
-        <div class="card-deck justify-content-center" style="width:50rem; margin: auto;">
-          <div class="card text-center">
-            <img class="card-img-top" src="../static/img/10.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Name</h5>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-              <p class="card-text"><small class="text-muted">College/Company</small></p>
-            </div>
-          </div>
-          <div class="card text-center">
-            <img class="card-img-top" src="../static/img/10.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Name</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est accusantium quidem?</p>
-              <p class="card-text"><small class="text-muted">College/company</small></p>
-            </div>
-          </div>
-          <div class="card text-center">
-            <img class="card-img-top" src="../static/img/10.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Name</h5>
-              <p class="card-text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-              <p class="card-text"><small class="text-muted">College/company</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- The Team End-->
-
-    <!-- Contact Us starts-->
-
-    <div class="row">
-      <div class="col-sm" style="padding-top:2%">
-        <nav class="navbar justify-content-between" style="background-color:#e9e4e4;">
-          <a class="navbar-brand" id="contact_us">Contact Us</a>
-        </nav>
-      </div>
-    </div>
-
-    <!-- Contact us ends-->
-
-  </div>
-
-<!-- Main Grid Ends -->
   <!-- importing some Javascripts-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
