@@ -14,11 +14,11 @@ body {
 }
 
 a {
-  color: #009970;
+  color: #0374b6;
 }
 
 a:hover {
-  color: #00cc95;
+  color: #0036cc;
   text-decoration: none;
 }
 
@@ -113,10 +113,10 @@ h1, h2, h3, h4, h5, h6 {
   #header {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     top: 0;
-    background: #009970;
+    background: #0374b6;
   }
   #header.header-scrolled, #header .header-container {
-    background: #009970;
+    background: #0374b6;
   }
   #header .logo h1 {
     font-size: 24px;
@@ -902,7 +902,7 @@ section {
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: #66ffd6;
+  color: #6682ff;
   font-size: 26px;
 }
 
@@ -1116,7 +1116,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #1862d2;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1136,7 +1136,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  border: 3px solid #1862d2;
   border-top-color: #eee;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;

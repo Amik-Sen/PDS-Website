@@ -59,7 +59,7 @@
   </header><!-- End Header -->
 
    <!-- ======= Hero Section ======= -->
-   <section id="hero" class="d-flex align-items-center" style="">
+   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
       <h1>DISTRIBUTION REQUIREMENTS PLANNING</h1>
       <h2>Plan, optimize and excute public distribution systems</h2>
@@ -115,7 +115,7 @@
             <div class="col-md-6 d-flex align-items-stretch">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                 <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4><a href=""> Forecast Module
+                <h4><a href="{% url 'home' %}"> Forecast Module
                 </a></h4>
                 <p>The module responsible for producing expected demand, which is a vital component for our application.</p>
               </div>
@@ -124,7 +124,7 @@
             <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
                 <div class="icon"><i class="bx bx-file"></i></div>
-                <h4><a href="">Data collection Module</a></h4>
+                <h4><a href="{% url 'home' %}">Data collection Module</a></h4>
                 <p>The module responsible for collecting input data or for updating existing data of the public distribution system.</p>
               </div>
             </div>
@@ -132,7 +132,7 @@
             <div class="col-md-6 d-flex align-items-stretch mt-4">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
                 <div class="icon"><i class="bx bx-tachometer"></i></div>
-                <h4><a href="">Optimization Module</a></h4>
+                <h4><a href="{% url 'home' %}">Optimization Module</a></h4>
                 <p>The module responsible for running the hybrid optimization algorithm to generate solution.</p>
               </div>
             </div>
@@ -140,7 +140,7 @@
             <div class="col-md-6 d-flex align-items-stretch mt-4">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
                 <div class="icon"><i class="bx bx-world"></i></div>
-                <h4><a href="">Visualisation Module</a></h4>
+                <h4><a href="{% url 'visual' %}">Visualisation Module</a></h4>
                 <p>The module responsible for generating all the maps and graphs in this application.</p>
               </div>
             </div>
@@ -177,9 +177,6 @@
                   <i class="bx bx-receipt"></i>
                   <h4>Capture Data</h4>
                   <p>Used for updating changes in the Distribution System</p>
-                  <div class="text-center">
-                    <a href="#services" class="btn-get-started scrollto">Get Started</a>
-                  </div>
                 </div>
               </div>
               <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
@@ -187,9 +184,6 @@
                   <i class="bx bx-cube-alt"></i>
                   <h4>Distribution Planning</h4>
                   <p>Takes input of model parameters and shows optimised results</p>
-                  <div class="text-center">
-                    <a href="#services" class="btn-get-started scrollto">Get Started</a>
-                  </div>
                 </div>
               </div>
               <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
@@ -197,16 +191,12 @@
                   <i class="bx bx-images"></i>
                   <h4>Visualisation</h4>
                   <p>Shows trends and maps for better planning of the distribution system.</p>
-                  <div class="text-center">
-                    <a href="#services" class="cta-btn">Get Started</a>
-                  </div>
                 </div>
               </div>
             </div>
           </div><!-- End .content-->
         </div>
       </div>
-
     </div>
   </section><!-- End Why Us Section -->
   
@@ -254,7 +244,7 @@
                 <h4>Visualisation</h4>
                 <p>click to begin</p>
                 <div class="portfolio-links">
-                  <a href="#" title="More Details"><i class="bx bx-play"></i></a>
+                  <a href="{% url 'visual' %}" title="More Details"><i class="bx bx-play"></i></a>
                 </div>
               </div>
             </div>
@@ -296,9 +286,9 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="200">
                   <div class="pic"><img src="{% static 'img/team/pr.jpg' %}" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>Pritee Ray </h4>
-                    <span>Professor</span>
-                    <p>IIM, Ranchi</p>
+                    <h4>Dr. Pritee Ray </h4>
+                    <span>Assistant Professor</span>
+                    <p>IIM Ranchi</p>
                     <div class="social">
                       <a href=""><i class="ri-twitter-fill"></i></a>
                       <a href=""><i class="ri-facebook-fill"></i></a>
@@ -389,7 +379,6 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mamata Jenamani</h3>
             <p>
               Industrial and Systems Engineering<br>
               IIT, Kharagpur,<br>
