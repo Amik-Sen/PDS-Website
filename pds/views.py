@@ -33,6 +33,7 @@ def visual(request):
     cov_map = map_cov(district,state)
     visual={"location": location,"district":district,"fps_map":fps_map,"ws_map":ws_map,"cov_map":cov_map,"num_fps":num_fps,"num_ws":num_ws}
     return render(request, 'visual.html',visual)
+
 class ChartData(APIView): 
     authentication_classes = [] 
     permission_classes = [] 
