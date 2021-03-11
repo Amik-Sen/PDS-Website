@@ -1,13 +1,4 @@
-/**
-* Template Name: Bethany - v2.1.0
-* Template URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -1167,6 +1158,18 @@ section {
 
 .contact .php-email-form button[type="submit"]:hover {
   background: #0374b6;
+}
+
+.contact .php-email-form input[type="submit"]{
+  background: #0374b6;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.contact .php-email-form input[type="submit"]:hover {
+  background: #045786;
 }
 
 @-webkit-keyframes animate-loading {

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 import urllib.request, json 
 import pandas as pd
 import geopandas
@@ -26,6 +26,11 @@ def plan(request):
 def visual(request):
     state = 'West Bengal'
     district = 'Bankura'
+    #print(request.POST.get('state'))
+    if request.method == "POST":
+        district = request.POST.get('district')
+        print(district)
+        return redirect('/pds/visual')
     dis_lat_lon_dir = os.path.join(settings.BASE_DIR,'pds','Data_files and other codes','District Lat Long',state+'_District_lat_long.xlsx')
     location_df = pd.read_excel(dis_lat_lon_dir,engine='openpyxl')
     location = location_df['District'].tolist()

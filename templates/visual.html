@@ -81,7 +81,7 @@
             </div>
           </div>
       <div class="row">
-          <form method="POST" role="form" class="php-email-form mt-4">
+          <form action = "{% url 'visual' %}" method="POST" class="php-email-form mt-4">
             {% csrf_token%}
             <div class="form-row">
               <div class="col-md-6 form-group">
@@ -100,7 +100,8 @@
               </div>
             </div>
             <!-- {{ form }} -->
-            <div class="text-center"><button type="submit" name ="submit" value ="save">Submit</button></div>
+            <div class="botton text-center">
+            <input style="background: #0374b6; border: 0; padding: 10px 30px; color: #fff; transition: 0.4s; border-radius: 50px;" type="submit" name ="submit" value ="Submit"></div>
           </form>
         </div>
       </div>
