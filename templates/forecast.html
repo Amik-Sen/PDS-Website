@@ -31,7 +31,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  <link href="{% static 'css/visual.css' %}" rel="stylesheet">
+  <link href="{% static 'css/forecast.css' %}" rel="stylesheet">
 </head>
 <body>
   <!-- ======= Header ======= -->
@@ -64,10 +64,10 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Visualisation Module</h2>
+        <h2>Forecasting Module</h2>
         <ol>
           <li><a href="{% url 'home' %}">Home</a></li>
-          <li>Visual Details</li>
+          <li>Forecast Details</li>
         </ol>
       </div>
 
@@ -75,146 +75,50 @@
   </section><!-- End Breadcrumbs -->
   <!-- ======= Input Section ======= -->
   <section id="contact" class="contact">
-    <div class="container" style="width:100%">
+    <div class="container">
       <div class="row">
             <div class="section-title">
-              <h2>{{district}}</h2>
+              <h2>Location</h2>
             </div>
-      </div>
-
-          <div class="row" style="width:100%">
-            <form method = 'POST' id = "visual_form" class = "">{% csrf_token %}
-              <div class="container">
-              <div class="row">
-              <div class="col-md-6 form-group">
-                <label for="state">State:</label>
-                    <select name="state" id="state" style="width: 100%; margin-left:2%">
-                    <option value="West Bengal">West Bengal</option>
-                    </select>
-              </div>
-              <div class="col-md-6 form-group">
-                <label for="district">District:</label>
-                    <select name="district" id="district" style="width: 100%; margin-left:2%">
-                        {% for case in location %}
-                    <option value="{{case}}">{{case}}</option>
-                    {% endfor %}
-                </select>
-              </div>
-              <div class="row justify-content-md-center" style = "align-items:center; width: 100%;">
-                  <input id = "forecast_submit_button" type="submit" name ="submit" value ="Submit"/>
-              </div>
-              </div>
-            </div>
-            </form>
           </div>
-
-      <!-- <div class="row"style="width:100%">
-          <form action = "" method="GET">
-          <div class = "container" style="width:100%" id = "visual_form">
-            <div class="row" style="width:100%">
-              <div class="col-md-6 form-group">
-                <label for="state">State:</label>
-                    <select name="state" id="state" style="width: 70%; margin-left:2%">
-                    <option value="West Bengal">West Bengal</option>
-                    </select>
-              </div>
-              <div class="col-md-6 form-group">
-                <label for="district">District:</label>
-                    <select name="district" id="district" style="width: 70%; margin-left:2%">
-                        {% for case in location %}
-                    <option value="{{case}}">{{case}}</option>
-                    {% endfor %}
-                </select>
-              </div>
+      <div class="row">
+          <form method = 'POST' id = "forecast_form" class = "">{% csrf_token %}
+            <div class="container">
+            <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="district">District:</label>
+              <input type="text" name ="district" id = "district" placeholder="Enter District" style= "width: 100%"/>
             </div>
-            <!-- {{ form }} -->
-            <!-- <div class="botton text-center">
-            <input style="background: #0374b6; border: 0; padding: 10px 30px; color: #fff; transition: 0.4s; border-radius: 50px;" type="submit" name ="submit" value ="Submit"></div>
+            <div class="col-md-6 form-group">
+              <label for="days">Days:</label>
+              <input type="text" name ="days" placeholder="Number of days" style= "width: 100%"/>
+            </div>
+            <div class="row justify-content-md-center" style = "align-items:center; width: 100%;">
+                <input id = "forecast_submit_button" type="submit" name ="submit" value ="Submit"/>
+            </div>
+            </div>
           </div>
           </form>
-        </div> -->
+        </div>
       </div>
+    </div>
+    </div>
   </section><!-- End Contact Section -->
-  <!-- ======= Counts Section ======= -->
-  <section id="counts" class="counts" style = "margin-top: 0px;">
-    <div class="container">
 
-      <div class="row counters">
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">-NA-</span>
-          <p>Predicted Demand</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">{{num_fps}}</span>
-          <p>Fair Price Shops</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">{{num_ws}}</span>
-          <p>Wholesalers</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-          <span data-toggle="counter-up">50</span>
-          <p>Godowns</p>
-        </div>
-
-      </div>
-
+  <div class="row">
+    <div class="col-md-6">
+      {% for Date in x %}
+      <p> Date : {{Date}} </p>
+      {% endfor %}
     </div>
-  </section><!-- End Counts Section -->
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-    <div class="container">
-
-        <div class="row">
-        <div class="col-lg-4">
-            <div class="section-title" data-aos="fade-right">
-            <h2>Maps</h2>
-            </div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                    {{cov_map|safe}}
-                <div class="member-info">
-                    <span>Covid Choropleth</span>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-6 ">
-                <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                    {{fps_map|safe}}
-                <div class="member-info">
-                    <span>FPS Location</span>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                    {{ws_map|safe}}
-                <div class="member-info">
-                    <span>Wholesalers</span>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-6 ">
-                <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                    {{fps_map|safe}}
-                <div class="member-info">
-                    <span>Godowns</span>
-                </div>
-                </div>
-            </div>
-        </div>
+    <div class="col-md-6">
+      {% for Data in y %}
+      <p> Date : {{Data}} </p>
+      {% endfor %}
     </div>
-    </section>
-    <!-- ======= Team Section ======= -->
+  </div>
+  
+    <!-- ======= Graph Section ======= -->
     <section id="team" class="team" style="background:rgb(245, 244, 244);">
         <div class="container">
     
@@ -320,44 +224,6 @@
   <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
   <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
   <script src="{% static 'vendor/aos/aos.js' %}"></script>
-  <script>
-    var endpoint = '/api'; 
-  
-  $.ajax({ 
-    method: "GET", 
-    url: endpoint, 
-    success: function(data) { 
-      drawLineGraph(data, 'line-chart');  
-      console.log("drawing"); 
-    }, 
-    error: function(error_data) { 
-      console.log(error_data); 
-    } 
-  }) 
-
-
-  function drawLineGraph(data, id) { 
-    var labels = data.label; 
-    var chartdata = data.data; 
-    var ctx = document.getElementById(id).getContext('2d'); 
-    var chart = new Chart(ctx, { 
-      // The type of chart we want to create 
-      type: 'line', 
-
-      // The data for our dataset 
-      data: chartdata,
-      // Configuration options go here 
-      options: { 
-        scales: { 
-          x: [{ 
-            type: 'timeseries',
-          }],  
-        } 
-      } 
-
-    }); 
-  } 
-  </script>
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>

@@ -7,6 +7,7 @@ import os
 from django.conf import settings
 from data_prep import prep
 from covid_map import map_cov,district_wise_case
+from forecast import output
 from .forms import StateInputForm
 from json import dumps 
 from rest_framework.views import APIView 
@@ -23,19 +24,29 @@ def plan(request):
     plan={}
     return render(request, 'plan.html',plan)
 
+def forecast(request):
+    context = {}
+    if(request.method == 'POST'):
+        x,y = output(request.POST['days'],request.POST['district'])
+        context = {'x':x, 'y':y}
+    return render(request, 'forecast.html', context)
+
 def visual(request):
     state = 'West Bengal'
     district = 'Bankura'
-    #print(request.POST.get('state'))
-    if request.method == "POST":
-        district = request.POST.get('district')
-        print(district)
-        return redirect('/pds/visual')
+    #print(request.POST.get('state'))    
     dis_lat_lon_dir = os.path.join(settings.BASE_DIR,'pds','Data_files and other codes','District Lat Long',state+'_District_lat_long.xlsx')
     location_df = pd.read_excel(dis_lat_lon_dir,engine='openpyxl')
     location = location_df['District'].tolist()
     fps_map,num_fps,ws_map,num_ws = prep(district,state)
     cov_map = map_cov(district,state)
+
+    if request.method == "POST":
+        district = request.POST['district']
+        print(request.GET)
+        fps_map,num_fps,ws_map,num_ws = prep(district,state)
+        cov_map = map_cov(district,state)
+    
     visual={"location": location,"district":district,"fps_map":fps_map,"ws_map":ws_map,"cov_map":cov_map,"num_fps":num_fps,"num_ws":num_ws}
     return render(request, 'visual.html',visual)
 

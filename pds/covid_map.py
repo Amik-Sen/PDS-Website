@@ -57,3 +57,4 @@ def map_cov(location,state):
     folium.LayerControl().add_to(m)
     m = m._repr_html_() 
     m.save(outfile=map_path) 
+    return m

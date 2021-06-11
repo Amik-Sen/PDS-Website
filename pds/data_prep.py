@@ -32,3 +32,4 @@ def prep(location,state):
     whole_map_path = os.path.join(settings.BASE_DIR,'template','whole_map.html')
     wholesaler_map.save(outfile=whole_map_path)
     fps_map.save(outfile=fps_map_path)
+    return fps_map,len(fps_location) ,wholesaler_map,len(wholesaler_location)
