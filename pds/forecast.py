@@ -93,10 +93,12 @@ def time_series(window, District):
   validation_gen = TimeseriesGenerator(
       validation_set, validation_set, length=5, batch_size=1)
 
-  early_stop = EarlyStopping(
-      monitor='val_loss', patience=20, restore_best_weights=True)
+  # early_stop = EarlyStopping(
+  #     monitor='val_loss', patience=20, restore_best_weights=True)
+  # model.fit_generator(generator, validation_data=validation_gen,
+  #                     epochs=100, callbacks=[early_stop], steps_per_epoch=10)
   model.fit_generator(generator, validation_data=validation_gen,
-                      epochs=100, callbacks=[early_stop], steps_per_epoch=10)
+                      epochs=20, steps_per_epoch=10)
 
   # # Convert the model.
   # converter = tf.lite.TFLiteConverter.from_keras_model(model)

@@ -14,7 +14,7 @@ from keras.preprocessing.sequence import TimeseriesGenerator
 from tensorflow.keras.callbacks import EarlyStopping
 import joblib
 
-def output(window,District):
+def output(window=10,District='Kolkata'):
 #   window = (int)(input("Enter number of days to be predicted:"))
 #   District = input("Enter District name:")
   t,c = time_series(window, District)
@@ -26,7 +26,7 @@ def output(window,District):
     #print("Date: {}   Predicted Cases: {}".format(
         #date_time[i], predicted_cases[i][0]))
   filename = 'finalized_model.sav'
-  joblib.dump(p,filename)
+  joblib.dump(predicted_cases, filename)
   return date_time ,predicted_cases
   
 def data_fetcher(District):
@@ -93,10 +93,13 @@ def time_series(window, District):
   validation_gen = TimeseriesGenerator(
       validation_set, validation_set, length=5, batch_size=1)
 
-  early_stop = EarlyStopping(
-      monitor='val_loss', patience=20, restore_best_weights=True)
+  # early_stop = EarlyStopping(
+  #     monitor='val_loss', patience=20, restore_best_weights=True)
+  # model.fit_generator(generator, validation_data=validation_gen,
+  #                     epochs=100, callbacks=[early_stop], steps_per_epoch=10)
   model.fit_generator(generator, validation_data=validation_gen,
-                      epochs=100, callbacks=[early_stop], steps_per_epoch=10)
+                      epochs=15, steps_per_epoch=10)
+
 
   # # Convert the model.
   # converter = tf.lite.TFLiteConverter.from_keras_model(model)

@@ -27,7 +27,7 @@ def plan(request):
 def forecast(request):
     context = {}
     if(request.method == 'POST'):
-        x,y = output(request.POST['days'],request.POST['district'])
+        x,y = output(int(request.POST['days']),request.POST['district'])
         context = {'x':x, 'y':y}
     return render(request, 'forecast.html', context)
 
